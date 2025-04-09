@@ -1,0 +1,2 @@
+.NET 8.0
+Identity 2.3.1
