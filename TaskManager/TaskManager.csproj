@@ -10,6 +10,7 @@
     <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Customer\Controller\" />
     <Folder Include="Areas\Customer\Views\" />
+    <Folder Include="Areas\Identity\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
   <ItemGroup>
