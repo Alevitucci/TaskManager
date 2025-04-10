@@ -17,8 +17,8 @@ namespace TaskManager.DataAccess.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<ApplicationUser>().HasData(
-                new ApplicationUser { Id = "1", Name = "Cat1"  },
-                new ApplicationUser { Id = "2", Name = "Cat2" }
+                new ApplicationUser { Name = "AC", StreetAddress = "Via delle Albizie 22", City = "Roma", State = "Italy", ZIPCode ="BOH"},
+                new ApplicationUser { Name = "Nam2", StreetAddress = "V", City = "C", State = "S", ZIPCode = "BOH" }
                 );
         }
     }
