@@ -3,8 +3,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using TaskManager.DataAccess.Repository.IRepository;
+using TaskManager.DataAccess;
 using TaskManager.DataAccess.Data;
+using TaskManager.Models.ViewModels;
+using TaskManager.Models;
+using TaskManager.DataAccess.Repository.IRepository;
 
 namespace TaskManager_CORSO_UDEMY.Areas.Admin.Controllers
 {
@@ -30,17 +33,7 @@ namespace TaskManager_CORSO_UDEMY.Areas.Admin.Controllers
         {
             RoleManagementVM RoleVM = new RoleManagementVM()
             {
-                ApplicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId, includeProperties: "Company"),
-                RoleList = _roleManager.Roles.Select(i => new SelectListItem
-                {
-                    Text = i.Name,
-                    Value = i.Name
-                }),
-                CompanyList = _unitOfWork.Company.GetAll().Select(i => new SelectListItem
-                {
-                    Text = i.Name,
-                    Value = i.Id.ToString()
-                }),
+                ApplicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId),
             };
 
             RoleVM.ApplicationUser.Role = _userManager.GetRolesAsync(_unitOfWork.ApplicationUser.Get(u => u.Id == userId)).GetAwaiter().GetResult().FirstOrDefault();
@@ -52,30 +45,30 @@ namespace TaskManager_CORSO_UDEMY.Areas.Admin.Controllers
             string oldRole = _userManager.GetRolesAsync(_unitOfWork.ApplicationUser.Get(u => u.Id == roleManagementVM.ApplicationUser.Id)).GetAwaiter().GetResult().FirstOrDefault();
             ApplicationUser applicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == roleManagementVM.ApplicationUser.Id);
 
-            if (!(roleManagementVM.ApplicationUser.Role == oldRole))
-            {
-                if (roleManagementVM.ApplicationUser.Role == SD.Role_Company)
-                {
-                    applicationUser.CompanyId = roleManagementVM.ApplicationUser.CompanyId;
-                }
-                if (oldRole == SD.Role_Company)
-                {
-                    applicationUser.CompanyId = null;
-                }
-                _unitOfWork.ApplicationUser.Update(applicationUser);
-                _unitOfWork.Save();
-                _userManager.RemoveFromRoleAsync(applicationUser, oldRole).GetAwaiter().GetResult();
-                _userManager.AddToRoleAsync(applicationUser, roleManagementVM.ApplicationUser.Role).GetAwaiter().GetResult();
-            }
-            else
-            {
-                if (oldRole == SD.Role_Company && applicationUser.CompanyId != roleManagementVM.ApplicationUser.CompanyId)
-                {
-                    applicationUser.CompanyId = roleManagementVM.ApplicationUser.CompanyId;
-                    _unitOfWork.ApplicationUser.Update(applicationUser);
-                    _unitOfWork.Save();
-                }
-            }
+            //if (!(roleManagementVM.ApplicationUser.Role == oldRole))
+            //{
+            //    if (roleManagementVM.ApplicationUser.Role == SD.Role_Company)
+            //    {
+            //        applicationUser.CompanyId = roleManagementVM.ApplicationUser.CompanyId;
+            //    }
+            //    if (oldRole == SD.Role_Company)
+            //    {
+            //        applicationUser.CompanyId = null;
+            //    }
+            //    _unitOfWork.ApplicationUser.Update(applicationUser);
+            //    _unitOfWork.Save();
+            //    _userManager.RemoveFromRoleAsync(applicationUser, oldRole).GetAwaiter().GetResult();
+            //    _userManager.AddToRoleAsync(applicationUser, roleManagementVM.ApplicationUser.Role).GetAwaiter().GetResult();
+            //}
+            //else
+            //{
+            //    if (oldRole == SD.Role_Company && applicationUser.CompanyId != roleManagementVM.ApplicationUser.CompanyId)
+            //    {
+            //        applicationUser.CompanyId = roleManagementVM.ApplicationUser.CompanyId;
+            //        _unitOfWork.ApplicationUser.Update(applicationUser);
+            //        _unitOfWork.Save();
+            //    }
+            //}
             return RedirectToAction("Index");
         }
 
@@ -88,13 +81,7 @@ namespace TaskManager_CORSO_UDEMY.Areas.Admin.Controllers
             foreach (var user in objUserList)
             {
                 user.Role = _userManager.GetRolesAsync(user).GetAwaiter().GetResult().FirstOrDefault();
-                if (user.Company == null)
-                {
-                    user.Company = new Company()
-                    {
-                        Name = "No azienda"
-                    };
-                }
+                
             }
             return Json(new { data = objUserList });
         }

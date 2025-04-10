@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using Esercizio.DataAccess.Repository.IRepository;
-using Esercizio.DataAccess.Data;
-using Microsoft.EntityFrameworkCore;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using TaskManager.DataAccess.Data;
+using TaskMAnager.DataAccess.Repository.IRepository;
 
 namespace Esercizio.DataAccess.Repository
 {
@@ -19,7 +13,7 @@ namespace Esercizio.DataAccess.Repository
         {
             _db = db;
             this.dbSet = _db.Set<T>();
-            _db.Products.Include(u => u.Category).Include(u => u.CategoryId);
+            //_db.Products.Include(u => u.Category).Include(u => u.CategoryId);
         }
         public void Add(T entity)
         {
