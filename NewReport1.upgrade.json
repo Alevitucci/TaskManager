@@ -1,0 +1,416 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "",
+    "targetDisplayName": ".NET 9.0"
+  },
+  "analysisStartTime": "2025-04-10T13:01:38.8011152Z",
+  "analysisEndTime": "2025-04-10T13:01:50.1497944Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 4,
+      "issues": 3,
+      "incidents": 18,
+      "effort": 18
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 4,
+        "Optional": 0,
+        "Potential": 14,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 15,
+        "Project": 3
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "TaskManager\\TaskManager.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 8,
+      "ruleInstances": [
+        {
+          "incidentId": "d2c96eba-8ae8-463e-a46e-4ef04b285496",
+          "ruleId": "NuGet.0003",
+          "projectPath": "TaskManager\\TaskManager.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity, 2.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.AspNetCore.Identity, 2.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "TaskManager\\TaskManager.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity, 2.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity, 2.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.AspNetCore.Identity 2.3.1"
+          }
+        },
+        {
+          "incidentId": "8838aefb-1875-494e-a97b-bf24f5c9441a",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager\\TaskManager.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Design 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Design 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager\\TaskManager.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Design 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Design 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.Design 8.0.0"
+          }
+        },
+        {
+          "incidentId": "169b4278-43c8-4b40-b67e-00f50ae88cd1",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager\\TaskManager.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Relational, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Relational 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.Relational, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Relational 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager\\TaskManager.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Relational, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Relational 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Relational, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Relational 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.Relational 8.0.0"
+          }
+        },
+        {
+          "incidentId": "8f2096ba-59d9-4456-9483-1a9a46ae3532",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager\\TaskManager.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Sqlite 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Sqlite 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager\\TaskManager.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Sqlite 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Sqlite 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.Sqlite 8.0.0"
+          }
+        },
+        {
+          "incidentId": "5d78a78f-1fdc-4e7e-9583-4177c4843095",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager\\TaskManager.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.SqlServer 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.SqlServer 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager\\TaskManager.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.SqlServer 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.SqlServer 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 8.0.0"
+          }
+        },
+        {
+          "incidentId": "d53a8529-57d2-4f59-a2e6-3cd231979540",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager\\TaskManager.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Tools 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Tools 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager\\TaskManager.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Tools 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Tools 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.Tools 8.0.0"
+          }
+        },
+        {
+          "incidentId": "f4765a9f-1cc9-407e-97f3-7f4918161376",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager\\TaskManager.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.7\n\nRecommendation:\n\nMicrosoft.VisualStudio.Web.CodeGeneration.Design 9.0.0",
+              "protected": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.7\n\nRecommendation:\n\nMicrosoft.VisualStudio.Web.CodeGeneration.Design 9.0.0"
+            },
+            "kind": "File",
+            "path": "TaskManager\\TaskManager.csproj",
+            "snippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.7\n\nRecommendation:\n\nMicrosoft.VisualStudio.Web.CodeGeneration.Design 9.0.0",
+            "protectedSnippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.7\n\nRecommendation:\n\nMicrosoft.VisualStudio.Web.CodeGeneration.Design 9.0.0",
+            "label": "Microsoft.VisualStudio.Web.CodeGeneration.Design 8.0.7"
+          }
+        },
+        {
+          "incidentId": "85720ca3-a4e6-42aa-b648-069f74f7b584",
+          "ruleId": "Project.0002",
+          "projectPath": "TaskManager\\TaskManager.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current: net8.0\nNew: net9.0",
+              "protected": "Current: net8.0\nNew: net9.0"
+            },
+            "kind": "File",
+            "path": "TaskManager\\TaskManager.csproj",
+            "snippet": "Current: net8.0\nNew: net9.0",
+            "protectedSnippet": "Current: net8.0\nNew: net9.0"
+          }
+        }
+      ]
+    },
+    {
+      "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 9,
+      "ruleInstances": [
+        {
+          "incidentId": "37e03fb5-7b08-4f3e-a44e-62a3a5a83c3a",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nMicrosoft.AspNetCore.Identity.EntityFrameworkCore 9.0.4",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nMicrosoft.AspNetCore.Identity.EntityFrameworkCore 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nMicrosoft.AspNetCore.Identity.EntityFrameworkCore 9.0.4",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nMicrosoft.AspNetCore.Identity.EntityFrameworkCore 9.0.4",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.0"
+          }
+        },
+        {
+          "incidentId": "967c59b7-5382-4ed8-a8ca-78a269beccdc",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore 8.0.0"
+          }
+        },
+        {
+          "incidentId": "502d8833-8bdc-4df0-b86f-c94b4369efa2",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Design 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Design 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Design 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Design 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.Design 8.0.0"
+          }
+        },
+        {
+          "incidentId": "d705ceb1-5b2d-4864-8e4c-676256a4d273",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Relational, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Relational 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.Relational, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Relational 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Relational, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Relational 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Relational, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Relational 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.Relational 8.0.0"
+          }
+        },
+        {
+          "incidentId": "3b640daf-a8af-452e-ac29-b1d964866585",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Sqlite 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Sqlite 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Sqlite 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Sqlite 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.Sqlite 8.0.0"
+          }
+        },
+        {
+          "incidentId": "756f75b1-ac1d-4fc0-952e-3bacaafdcc70",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.SqlServer 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.SqlServer 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.SqlServer 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.SqlServer 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 8.0.0"
+          }
+        },
+        {
+          "incidentId": "b9823b1c-9889-44fd-824d-e26f328cefc2",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Tools 9.0.4",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Tools 9.0.4"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Tools 9.0.4",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nMicrosoft.EntityFrameworkCore.Tools 9.0.4",
+            "label": "Microsoft.EntityFrameworkCore.Tools 8.0.0"
+          }
+        },
+        {
+          "incidentId": "d7219a02-a1e5-46a9-9633-265158a0fd1c",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.VisualStudio.Web.CodeGeneration.Design 9.0.0",
+              "protected": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.VisualStudio.Web.CodeGeneration.Design 9.0.0"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.VisualStudio.Web.CodeGeneration.Design 9.0.0",
+            "protectedSnippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nMicrosoft.VisualStudio.Web.CodeGeneration.Design 9.0.0",
+            "label": "Microsoft.VisualStudio.Web.CodeGeneration.Design 8.0.0"
+          }
+        },
+        {
+          "incidentId": "d65a941a-7046-4e77-a49b-170f54ed1538",
+          "ruleId": "Project.0002",
+          "projectPath": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current: net8.0\nNew: net9.0",
+              "protected": "Current: net8.0\nNew: net9.0"
+            },
+            "kind": "File",
+            "path": "TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
+            "snippet": "Current: net8.0\nNew: net9.0",
+            "protectedSnippet": "Current: net8.0\nNew: net9.0"
+          }
+        }
+      ]
+    },
+    {
+      "path": "TaskManager.Models\\TaskManager.Models.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "ruleInstances": []
+    },
+    {
+      "path": "TaskManager.Utility\\TaskManager.Utility.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "ruleInstances": [
+        {
+          "incidentId": "a3e223bf-c68a-417b-b9d1-5cb4c11b79ec",
+          "ruleId": "Project.0002",
+          "projectPath": "TaskManager.Utility\\TaskManager.Utility.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current: net8.0\nNew: net9.0",
+              "protected": "Current: net8.0\nNew: net9.0"
+            },
+            "kind": "File",
+            "path": "TaskManager.Utility\\TaskManager.Utility.csproj",
+            "snippet": "Current: net8.0\nNew: net9.0",
+            "protectedSnippet": "Current: net8.0\nNew: net9.0"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in moderrn .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0003": {
+      "id": "NuGet.0003",
+      "description": "NuGet package functionality is included with framework reference.\n\nPackage needs to be removed.",
+      "label": "NuGet package functionality is included with framework reference",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262609",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
