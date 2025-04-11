@@ -8,9 +8,8 @@ using TaskMAnager.DataAccess.Repository.IRepository;
 
 namespace TaskManager.DataAccess.Repository.IRepository
 {
-    public interface IApplicationUserRepository : IRepository<ApplicationUser>
+    public interface ITaskRepository : IRepository<Task>
     {
-        public void Update(ApplicationUser applicationUser);
-
+        public void Update(Task task);
     }
 }

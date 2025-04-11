@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using TaskManager.DataAccess.Data;
 using TaskMAnager.DataAccess.Repository.IRepository;
 
-namespace Esercizio.DataAccess.Repository
+namespace TaskManager.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
@@ -60,10 +60,12 @@ namespace Esercizio.DataAccess.Repository
 
         public void Remove(T entity)
         {
-            dbSet.Remove(entity);        }
+            dbSet.Remove(entity);        
+        }
 
         public void RemoveRange(IEnumerable<T> entity)
         {
-            dbSet.RemoveRange(entity);     }
+            dbSet.RemoveRange(entity);     
+        }
     }
 }
