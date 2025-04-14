@@ -1,0 +1,66 @@
+﻿@using TaskManager.Models.ViewModels
+@model AssignmentVM;
+
+<div class="card shadow border-0 my-4">
+	<div class="card-header bg-secondary bg-gradient ml-0 py-3">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2 class="text-white py-2"> @(Model.Assignment.Id != 0 ? "Modifica" : "Creazione") del compito</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card-body p-4">
+	<form method="post" class="row" enctype="multipart/form-data">
+		<input asp-for="Assignment.Id" hidden/>
+	<div class="row">
+			<div class="col-10">
+				<div class="border p-3 mt-4">
+					<div class="mb-3 row p-1">
+						<label asp-for="Assignment.TaskName" class="p-0" categoria></label>
+						<input asp-for="Assignment.TaskName" class="form-control" />
+						<span asp-validation-for="Assignment.TaskName" class="text-danger"></span>
+					</div>
+					<div class="mb-3 row p-1">
+						<label asp-for="Assignment.Description" class="p-0"></label>
+						<input asp-for="Assignment.Description" class="form-control" />
+						<span asp-validation-for="Assignment.Description" class="text-danger"></span>
+					</div>
+					<div class="mb-3 row p-1">
+						<label asp-for="Assignment.Starting" class="p-0"></label>
+						<input asp-for="Assignment.Starting" class="form-control" />
+						<span asp-validation-for="Assignment.Starting" class="text-danger"></span>
+					</div>
+					<div class="mb-3 row p-1">
+						<label asp-for="Assignment.Ending" class="p-0"></label>
+						<input asp-for="Assignment.Ending" class="form-control" />
+						<span asp-validation-for="Assignment.Enging" class="text-danger"></span>
+					</div>
+					<div class="mb-3 row p-1">
+						<label asp-for="Assignment.Status" class="p-0"></label>
+						<input asp-for="Assignment.Status" class="form-control" />
+						<span asp-validation-for="Assignment.Status" class="text-danger"></span>
+					</div>
+					<div class="row pt-2">
+						<div class="col-6 col-md-3">
+							@if (Model.Assignment.Id != 0)
+							{
+								<button type="submit" asp-controller="Product" asp-action="Upsert" class="btn btn-primary form control" style="width:150px">Modificare</button>
+							}
+							else
+							{
+								<button type="submit" asp-controller="Product" asp-action="Upsert" class="btn btn-primary form control" style="width:150px">Creare</button>
+							}
+						</div>
+						<div class="col-6 col-md-3">
+							<a asp-controller="Product" asp-action="Index" class="btn btn-secondary border form-control" style="width:150px">Tornare alla lista</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-2">
+		</div>
+		</div>
+</form>
+</div>

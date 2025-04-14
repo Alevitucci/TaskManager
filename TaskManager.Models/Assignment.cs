@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskManager.Models
 {
-    public class Task
+    public class Assignment
     {
         [Key]
         [Required]

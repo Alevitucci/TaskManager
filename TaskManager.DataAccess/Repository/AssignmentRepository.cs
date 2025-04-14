@@ -10,16 +10,16 @@ using TaskManager.DataAccess.Repository;
 
 namespace TaskManager.DataAccess.Repository
 {
-    public class TaskRepository : Repository<Task>, ITaskRepository
+    public class AssignmentRepository : Repository<Assignment>, IAssignmentRepository
     {
         private ApplicationDbContext _db;
-        public TaskRepository(ApplicationDbContext db) : base(db)
+        public AssignmentRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
-        public void Update(Task task)
+        public void Update(Assignment assignment)
         {
-            _db.Tasks.Update(task);
+            _db.Assignments.Update(assignment);
         }
     }
 }
