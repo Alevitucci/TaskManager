@@ -1,0 +1,62 @@
+﻿@using TaskManager.Models
+@model List<Assignment>
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Lista Compiti
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Assignment" asp-action="Upsert" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Creare un nuovo task
+            </a>
+        </div>
+    </div>
+
+    <table id="tblData" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titolo</th>
+                <th>Descrizione</th>
+                <th>Data di Inizio</th>
+                <th>Data di Scadenza</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var assignment in Model)
+            {
+                <tr>
+                    <td>@assignment.Id</td>
+                    <td>@assignment.TaskName</td>
+                    <td>@assignment.Description</td>
+                    <td>@assignment.Starting.ToString("dd/MM/yyyy")</td>
+                    <td>@assignment.Ending.ToString("dd/MM/yyyy")</td>
+                    <td>@assignment.Status</td>
+
+                    <td>
+                        <a asp-controller="Assignment" asp-action="Upsert" asp-route-id="@assignment.Id" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil-square"></i> Modifica
+                        </a>
+                        <a asp-controller="Assignment" asp-action="Delete" asp-route-id="@assignment.Id" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Elimina
+                        </a>
+                       
+                        
+                        
+                       @*  <button class="btn btn-danger btn-sm" asp-controller="Assignment" asp-action="Delete" onclick="DeleteAssignment(@assignment.Id)">
+                            <i class="bi bi-trash"></i> Elimina
+                        </button> *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/task.js"></script>
+}

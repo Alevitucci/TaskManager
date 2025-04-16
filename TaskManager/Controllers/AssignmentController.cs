@@ -8,10 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using NuGet.DependencyResolver;
 
-namespace TaskManager_CORSO_UDEMY.Areas.Admin.Controllers
+namespace TaskManager.Controllers
 {
-    [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin)]
+    //[Area("Admin")]
+    //[Authorize(Roles = SD.Role_Admin)]
     public class AssignmentController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

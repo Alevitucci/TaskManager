@@ -34,7 +34,7 @@
 					<div class="mb-3 row p-1">
 						<label asp-for="Assignment.Ending" class="p-0"></label>
 						<input asp-for="Assignment.Ending" class="form-control" />
-						<span asp-validation-for="Assignment.Enging" class="text-danger"></span>
+						<span asp-validation-for="Assignment.Ending" class="text-danger"></span>
 					</div>
 					<div class="mb-3 row p-1">
 						<label asp-for="Assignment.Status" class="p-0"></label>
@@ -45,15 +45,15 @@
 						<div class="col-6 col-md-3">
 							@if (Model.Assignment.Id != 0)
 							{
-								<button type="submit" asp-controller="Product" asp-action="Upsert" class="btn btn-primary form control" style="width:150px">Modificare</button>
+								<button type="submit" asp-controller="Assignment" asp-action="Upsert" class="btn btn-primary form control" style="width:150px">Modificare</button>
 							}
 							else
 							{
-								<button type="submit" asp-controller="Product" asp-action="Upsert" class="btn btn-primary form control" style="width:150px">Creare</button>
+								<button type="submit" asp-controller="Assignment" asp-action="Upsert" class="btn btn-primary form control" style="width:150px">Creare</button>
 							}
 						</div>
 						<div class="col-6 col-md-3">
-							<a asp-controller="Product" asp-action="Index" class="btn btn-secondary border form-control" style="width:150px">Tornare alla lista</a>
+							<a asp-controller="Assignment" asp-action="Index" class="btn btn-secondary border form-control" style="width:150px">Tornare alla lista</a>
 						</div>
 					</div>
 				</div>
