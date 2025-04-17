@@ -100,20 +100,7 @@ namespace TaskManager.Controllers
         //    string productPath = @"images\products\product-" + id;
         //    string finalPath = Path.Combine(_webHostEnvironment.WebRootPath, productPath);
 
-        //    if (!Directory.Exists(finalPath)) {
-        //        string[] filePaths = Directory.GetFiles(finalPath);
-        //        foreach (string filePath in filePaths)
-        //        {
-        //            System.IO.File.Delete(filePath);
-        //        }
-        //        Directory.CreateDirectory(finalPath);
-        //}
-            _unitOfWork.Assignment.Remove(productToBeDeleted);
-            _unitOfWork.Save();
 
-            List<Assignment> objProductList = _unitOfWork.Assignment.GetAll()/*(includeProperties: "Category")*/.ToList();
-            return Json(new { data = objProductList });
-        }
         #endregion
     }
 }
